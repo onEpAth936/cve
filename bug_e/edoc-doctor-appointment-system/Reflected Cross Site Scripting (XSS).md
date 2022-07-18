@@ -14,10 +14,10 @@ Visit http://ip/patient/index.php ， Will access the page of the module
 
 Fill it with`<script>alert(11)</script>`，then click search button.
 
-![image-20220718110327700](.\img\image-20220718110327700.png)
+![image-20220718110327700](./img/image-20220718110327700.png)
 
 
 
 You will see the pop -up window.
 
-![image-20220718110407647](.\img\image-20220718110407647.png)
+![image-20220718110407647](./img/image-20220718110407647.png)

